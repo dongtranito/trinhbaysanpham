@@ -1,0 +1,153 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    /* background-color: rgb(181, 168, 168); */
+}
+.sanPham{
+    position:relative;
+    background-color: #f6f0df;
+    height: 100vh;
+}
+
+.slider{
+    width:60%;
+    height: 100%;
+    position: absolute;
+    
+    padding-top:70px;
+}
+
+.sanPham .slider .anh{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin:auto;
+  height: 70%;
+  padding-top:60px;
+  position: relative;
+  z-index: 10;
+}
+.slider img{
+    width: 100%;
+    object-fit: cover;
+    transition: opacity 1s ease;
+    border-radius: 20px;
+    border: 2px solid #ff0000;
+    overflow: hidden;
+    margin: 5px ;
+}
+
+.sanPham .noiDung{
+    position:absolute;
+    width: 40%;
+    right: 0px;
+    top:200px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom :50px;
+    padding-right: 100px;
+}
+
+.tieude{
+    text-align: center;
+    font-size: 24px;
+    height: 100px;
+    font-weight: 800;
+} 
+.mota {
+    /* Các thiết lập phụ thuộc vào nhu cầu cụ thể */
+    text-align: justify; /* Căn giữa nội dung */
+    /* Các thuộc tính khác tùy thuộc vào yêu cầu của bạn */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+
+
+.slider .buttons{
+    position: absolute;
+    top:40%;
+    padding:0px 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    font-size: 22px;
+    font-weight: 1000;
+    font-family: monospace;
+    background-color: none;
+    background-color:rgb(243, 234, 234);
+}
+
+.slider .buttons button:hover{
+    background-color:rgb(223, 207, 207);
+    cursor: pointer;
+}
+
+.slider .dots{
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #d32525;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+}
+
+.hien {
+    animation: fadein 0.5s ease;
+}
+
+@keyframes fadein {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
+}
+
+.anhPhongTo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#f6f0df; /* Nền màu vàng */
+    display: flex;
+    justify-content: center; /* Căn giữa ảnh theo trục ngang */
+    align-items: center; /* Căn giữa ảnh theo trục dọc */
+    z-index: 10; /* Đảm bảo div này nằm trên cùng */
+    display:none;
+
+}
+.anhPhongTo img {
+    max-width: 95%; /* Giới hạn chiều rộng của ảnh */
+    max-height: 95%; /* Giới hạn chiều cao của ảnh */
+    border:none;
+    border-radius: 0px;
+    object-fit: contain
+}
+
+.slider img:hover{
+    cursor: pointer;
+}
